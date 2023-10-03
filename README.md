@@ -6,5 +6,5 @@ Author: **Dieu-Anh (Audrey) Trinh**
 
 ## Video Walkthrough
 Here's a walkthrough of implemented required features:
-<img src='https://i.imgur.com/qlxaa7m.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/4tVqE5n.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 GIF created with [LICECap](https://www.cockos.com/licecap/) 
