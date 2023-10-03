@@ -6,6 +6,6 @@ Author: **Dieu-Anh (Audrey) Trinh**
 
 ## Video Walkthrough
 Here's a walkthrough of implemented features:
-<img src='https://i.imgur.com/4tVqE5n.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='vnese_attraction_walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LICECap](https://www.cockos.com/licecap/) 
