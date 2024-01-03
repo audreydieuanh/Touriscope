@@ -83,3 +83,24 @@ h1 {
     font-size: 50px;
   }
 }
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.home-link {
+  border: 1px dotted white;
+  background: white;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-size: large;
+  color: red;
+}
+
+button {
+  position: sticky;
+  top: 20px;
+}
