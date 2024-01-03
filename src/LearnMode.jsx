@@ -38,7 +38,6 @@ const LearnMode = () => {
             <div>
                 <h2>Vietnamese Culture Quiz</h2>
                 <h4>How well do you know about Vietnamese culture? Let's test your knowledge!</h4>
-                <h5> Current Streak: , Best Streak:</h5>
             </div>
             <div className="learnFlashcard">
                 <FlashCards
