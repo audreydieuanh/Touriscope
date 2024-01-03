@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Web Development Project 1 - *Vietnam Tourist Attractions*
 
@@ -52,3 +53,16 @@ Trying to find an appropriate layout for the app took me quite some time.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+=======
+# Vietnam Tourist Attraction web app
+
+Author: **Dieu-Anh (Audrey) Trinh**
+
+**This web app displays popular tourist attractions in Vietnam, with links for more information included and flashcards for users to learn more about Vietnamese culture**
+
+## Video Walkthrough
+Here's a walkthrough of implemented features:
+<img src='vnese_attraction_walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LICECap](https://www.cockos.com/licecap/) 
+>>>>>>> 70b3aee719de81d964ede03a1738a940dfd47711

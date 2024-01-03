@@ -1,0 +1,26 @@
+.flashCard .question,
+.flashCard .answer {
+    text-align: center;
+}
+
+.flashCard {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    width: 28%;
+    padding: 40px 0 0 15px;
+    margin: calc(10% / 6);
+    display: inline-block;
+    background-color: white;
+    border-radius: 5% 5%;
+    box-shadow: 0 15px 25px #817c7c33;
+    height: 150px;
+    background-color: beige;
+    color: red;
+    text-align: center;
+    font-size: large;
+}
+
+
+
