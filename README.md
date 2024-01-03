@@ -10,7 +10,7 @@ Author: **Dieu Anh Trinh**
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://i.imgur.com/1C8vCg2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='project_walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LICECap](https://www.cockos.com/licecap/) 
 
