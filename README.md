@@ -1,6 +1,6 @@
 
 
-# *Vietnam Tourist Attractions*
+# *Touriscope*
 
 Author: **Dieu Anh Trinh**
 
