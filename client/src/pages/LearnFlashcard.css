@@ -1,0 +1,97 @@
+.flashCardLearn {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9edd5;
+    transition: transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.flashCardLearn:hover {
+    transform: scale(1.05);
+}
+
+.learnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question,
+.answer {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #28150e;
+}
+
+.question div {
+    font-weight: bold;
+    color: #f2a123;
+}
+
+.answer {
+    background-color: #25632f;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.guess-space {
+    margin-top: 20px;
+    width: 30%;
+}
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #dc201c;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+input[type="text"].correct {
+    border-color: #25632f;
+}
+
+input[type="text"].incorrect {
+    border-color: #dc201c;
+}
+
+.button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.submit {
+    background-color: #f2a123;
+}
+
+.seeAnswer {
+    background-color: #dc201c;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}

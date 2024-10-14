@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import FlashCards from './LearnFlashcard.jsx';
-import questionJson from './questionList.json';
+import questionJson from '../questionList.json';
 import './LearnMode.css';
 
 const LearnMode = () => {
@@ -35,11 +35,11 @@ const LearnMode = () => {
 
     return (
         <>
-            <div>
-                <h2>Vietnamese Culture Quiz</h2>
-                <h4>How well do you know about Vietnamese culture? Let's test your knowledge!</h4>
+            <div className="textQuiz">
+                <h2>Culture Quiz</h2>
+                <h4>How well do you know about culture? Let's test your knowledge!</h4>
             </div>
-            <div className="learnFlashcard">
+            <div className="flashcardContainer">
                 <FlashCards
                     question={questionJson.questionsList[currentCard].question}
                     answer={questionJson.questionsList[currentCard].answer}

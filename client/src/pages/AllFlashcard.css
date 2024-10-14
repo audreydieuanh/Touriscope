@@ -1,0 +1,62 @@
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h5 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.link {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2a123;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #dc201c;
+    transform: scale(1.05);
+}
+
+.allFlashcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dc201c;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #f2a123;
+}

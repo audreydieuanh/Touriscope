@@ -1,0 +1,27 @@
+.flashCardLearn .question,
+.flashCardLearn .answer {
+    position: absolute;
+    padding: 5px;
+    justify-content: center;
+    backface-visibility: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.button .cardMove {
+    display: inline-block;
+    margin: 0;
+}
+
+.textQuiz {
+    color: #2b5c2e; 
+    text-align: center; 
+    letter-spacing: 2px; 
+    margin-bottom: 20px; 
+    background-color: #f9edd5; 
+    padding: 15px 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+

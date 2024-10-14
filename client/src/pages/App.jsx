@@ -1,25 +1,45 @@
 import { useState } from 'react'
-import templeOfLite from './images/temple_of_literature.jpg'
-import hoiAn from './images/hoi_an.jpg'
-import conDao from './images/con_dao_islands.jpg'
-import hue from './images/imperial_citadel.jpg'
-import meKong from './images/mekong_delta.jpg'
-import muiNe from './images/mui_ne_sand_dunes.jpeg'
-import sonDoong from './images/son_doong_cave.jpeg'
-import myKhe from './images/my_khe_beach.jpg'
-import saPa from './images/sa_pa_terraces.jpg'
-import haLong from './images/halong_bay.jpeg'
-import oldQuarter from './images/header.jpg'
-import phuQuoc from './images/phuquoc.jpeg'
+import templeOfLite from '../images/temple_of_literature.jpg'
+import hoiAn from '../images/hoi_an.jpg'
+import conDao from '../images/con_dao_islands.jpg'
+import hue from '../images/imperial_citadel.jpg'
+import meKong from '../images/mekong_delta.jpg'
+import muiNe from '../images/mui_ne_sand_dunes.jpeg'
+import sonDoong from '../images/son_doong_cave.jpeg'
+import myKhe from '../images/my_khe_beach.jpg'
+import saPa from '../images/sa_pa_terraces.jpg'
+import haLong from '../images/halong_bay.jpeg'
+import oldQuarter from '../images/header.jpg'
+import phuQuoc from '../images/phuquoc.jpeg'
 import './App.css'
-import Card from './Card.jsx'
+import Card from '../components/Card.jsx'
 import { Link, Outlet } from "react-router-dom"
 
 const App = () => {
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    const fetchQuestions = async () => {
+        try {
+            const response = await fetch('http://localhost:3001/questions');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const text = await response.text();
+            const data = JSON.parse(text);
+            setQuestions(data);
+        } catch (error) {
+            console.error('There was a problem with your fetch operation:', error);
+        }
+    }
+
+    fetchQuestions();
+}, []);
   return (
     <>
       <div className="header">
-        <h1>Vietnam Tourist Attractions</h1>
+        <h1>Touriscope</h1>
       </div>
       <div>
       <Link to="flashcard" className='link'>

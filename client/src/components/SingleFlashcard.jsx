@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import "./SingleFlashcard.css";
 
-const singleFlashcard = (props) => {
+const SingleFlashcard = (props) => {
     const [flip, setFlip] = useState(true);
     var difficulty = props.difficulty;
     return (
@@ -9,7 +10,7 @@ const singleFlashcard = (props) => {
         onClick={() => { setFlip(!flip) }}>
             {flip ?
                 <div className="question">
-                    <div>&lt;{props.difficulty}&gt;</div>
+                    {/* <div>&lt;{props.difficulty}&gt;</div> */}
                     <div>{props.question}</div>
                 </div>
                 : <div className="answer">Answer: {props.answer}</div>}
@@ -17,4 +18,4 @@ const singleFlashcard = (props) => {
     )
 }
 
-export default singleFlashcard;
+export default SingleFlashcard;
