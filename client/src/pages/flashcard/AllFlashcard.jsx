@@ -1,37 +1,58 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import SingleFlashcard from '../components/SingleFlashcard.jsx';
-import questionJson from '../questionList.json';
+import SingleFlashcard from '../../components/SingleFlashcard.jsx';
 import "./allFlashcard.css";
 import { Link, Outlet } from "react-router-dom"
 
 
 const Flashcard = () => {
+    const [questions, setQuestions] = useState([]);
     const [selectedDifficulty, setSelectedDifficulty] = useState('all');
-    const [filteredQuestions, setFilteredQuestions] = useState(questionJson.questionsList);
-    const [questionLength, setQuestionLength] = useState(questionJson.questionsList.length);
+    const [filteredQuestions, setFilteredQuestions] = useState([]);
+    const [questionLength, setQuestionLength] = useState(0);
 
     const addFlashCards = (list) => {
         return list.map((item) =>
-            <SingleFlashcard className='flashcard' question={item.question} answer={item.answer} difficulty={item.difficulty} />);
-    }
+            <SingleFlashcard key={item.id} className='flashcard' question={item.question} answer={item.answer} difficulty={item.difficulty} />);
+    };
+
+    useEffect(() => {
+        const fetchQuestions = async () => {
+            try {
+                const response = await fetch('http://localhost:3001/questions');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const text = await response.text();
+                const data = JSON.parse(text);
+                setQuestions(data);
+                setFilteredQuestions(data);
+                setQuestionLength(data.length);
+            } catch (error) {
+                console.error('There was a problem with your fetch operation:', error);
+            }
+        }
+
+        fetchQuestions();
+    }, []);
 
     useEffect(() => {
         const filterQuestions = () => {
-            let filtered = questionJson.questionsList;
+            let filtered = questions;
             if (selectedDifficulty === 'easy') {
-                filtered = questionJson.questionsList.filter(question => question.difficulty === 'easy');
+                filtered = questions.filter(question => question.difficulty === 'easy');
             } else if (selectedDifficulty === 'medium') {
-                filtered = questionJson.questionsList.filter(question => question.difficulty === 'medium');
+                filtered = questions.filter(question => question.difficulty === 'medium');
             } else if (selectedDifficulty === 'hard') {
-                filtered = questionJson.questionsList.filter(question => question.difficulty === 'hard');
+                filtered = questions.filter(question => question.difficulty === 'hard');
             }
             setFilteredQuestions(filtered);
             setQuestionLength(filtered.length);
         };
 
         filterQuestions();
-    }, [selectedDifficulty]);
+    }, [selectedDifficulty, questions]);
 
     return (
         <>

@@ -22,6 +22,7 @@
   padding: 2em;
   font-size: larger;
   text-align: center;
+  overflow: hidden;
 }
 
 .flashCard:hover {
@@ -35,6 +36,8 @@
   font-size: 18px;
   color: #28150e;
   flex-grow: 1;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .question div {

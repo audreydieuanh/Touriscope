@@ -3,7 +3,7 @@ import { useState } from "react";
 import './LearnFlashcard.css';
 
 const LearnFlashcard = (props) => {
-    const [flip, setFlip] = useState(true);
+    const { front, setFront } = props;
     var difficulty = props.difficulty;
 
     const [guess, setGuess] = useState('');
@@ -31,8 +31,8 @@ const LearnFlashcard = (props) => {
         <>
             <div className="learnContainer">
                 <div className="flashCardLearn" id={`${difficulty == 'easy' ? 'easy' : (difficulty == 'medium' ? 'medium' : 'hard')}`}
-                    onClick={() => { setFlip(true) }}>
-                    {flip ?
+                    onClick={() => { setFront(true) }}>
+                    {front ?
                         <div className="question">
                             <div>{props.question}</div>
                         </div>
@@ -54,11 +54,10 @@ const LearnFlashcard = (props) => {
                     </form>
                 </div>
                 <button type="submit" className="button submit" onClick={checkAnswer}>Submit</button>
-                <button type="seeAnswer" className="button seeAnswer" onClick={() => { setFlip(false) }}>See Answer</button>
+                <button type="seeAnswer" className="button seeAnswer" onClick={() => { setFront(false) }}>See Answer</button>
             </div>
             <h3>{result}</h3>
-            {/* {printResult()}
-            <h3>{result}</h3> */}
+
 
         </>
     )
