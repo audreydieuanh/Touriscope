@@ -1,5 +1,3 @@
-
-
 # *Touriscope*
 
 Author: **Dieu Anh Trinh**

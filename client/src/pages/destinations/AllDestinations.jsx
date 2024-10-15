@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+import './AllDestination.css'
 import Card from '../../components/Card.jsx'
 import { Link, Outlet } from "react-router-dom"
 
@@ -13,7 +13,7 @@ const App = () => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-
+        
         const text = await response.text();
         const data = JSON.parse(text);
         setDestinations(data);
@@ -36,7 +36,7 @@ const App = () => {
         <h1>Touriscope</h1>
       </div>
       <div>
-        <Link to="flashcard" className='link'>
+        <Link to="/flashcard" className='link'>
           <button>Flashcard</button></Link>
       </div>
 

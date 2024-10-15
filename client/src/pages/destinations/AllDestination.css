@@ -45,29 +45,6 @@ h1 {
   text-shadow: beige 1px 0 10px;
 }
 
-.Card {
-  width: 28%;
-  padding: 0 0 15px;
-  margin: calc(10% / 6);
-  display: inline-block;
-  background-color: white;
-  border-radius: 0 5% 5%;
-  box-shadow: 0 15px 25px #817c7c33;
-}
-
-.Card img {
-  max-width: 100%;
-}
-
-.Card h3 {
-  margin: 0.5em;
-  font-size: 25px;
-}
-
-.Card button {
-  font-size: 15px;
-}
-
 @media (max-width: 750px) {
   .Card {
     width: 80%;
