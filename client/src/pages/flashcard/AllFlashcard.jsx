@@ -63,6 +63,7 @@ const Flashcard = () => {
                 </h5>
                 <Link to="learn" className='link'>
                     <button>Learn</button></Link>
+                    <Link to="add" className='link'><button className='addButton'>Add a question</button></Link>
                 <div className='allFlashcards'>
                     <label htmlFor="difficulty-select">Select difficulty:</label>
                     <select
