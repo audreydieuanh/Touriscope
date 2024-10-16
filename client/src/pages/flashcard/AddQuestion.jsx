@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
 const AddQuestion = () => {
-    const [question, setQuestion] = useState("");
-    const [answer, setAnswer] = useState("");
-    const [difficulty, setDifficulty] = useState("");
     const [newQuestion, setNewQuestion] = useState({
         id: 0, question: "", answer: "", difficulty: ""
     });

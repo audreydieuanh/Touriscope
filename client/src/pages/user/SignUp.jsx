@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import firebaseAuthError from './firebaseAuthError.json';
+import {Link} from 'react-router-dom';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -18,12 +19,13 @@ const SignUp = () => {
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
-            
+
             await setDoc(doc(db, 'users', user.uid), {
                 email: user.email,
                 firstName,
                 lastName,
                 savedDestinations: [],
+                highestStreak: 0
             });
             if (user) {
                 navigate('/log-in');
@@ -57,8 +59,11 @@ const SignUp = () => {
                     placeholder='Enter your password'
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}></input>
-                <button type='submit'>Sign Up</button>
+                <button type='submit' className='signUpButton'>Sign Up</button>
                 {error ? <p className='errorMessage'>{error}</p> : null}
+                <div>
+                    <p>Already signed up? Log in <Link to='/log-in'>here</Link></p>
+                </div>
             </form>
         </div>
     )

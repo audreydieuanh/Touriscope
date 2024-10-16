@@ -1,0 +1,66 @@
+.header1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 3px;
+    line-height: 44px;
+    text-transform: uppercase;
+    background-color: #f4dec2;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #e4922e;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.linkButton {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.content1 {
+    font-family: 'Montserrat', serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-transform: none;
+}
+
+.content2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 31px;
+    text-transform: none;
+}
+
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    /* Ensure Proxima Nova is set for the body */
+}
+
+/* button {
+    background-color: #e4922e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b6261a;
+} */

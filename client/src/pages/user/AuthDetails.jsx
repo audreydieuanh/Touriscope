@@ -4,16 +4,19 @@ import { db, auth } from "./firebase";
 import LogIn from "./LogIn";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import UserProfile from "./UserProfile";
+import useUserData from "./useUserData";
 
 const AuthDetails = () => {
+    const { firstName } = useUserData();
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
+                setLoading(false); 
             } else {
                 navigate('/sign-up');
             }
@@ -32,9 +35,13 @@ const AuthDetails = () => {
         });
     }
 
+    if (loading) {
+        return <div>Loading...</div>; 
+    }
+
     return (
         <div>
-            {user ? <><UserProfile />
+            {user ? <><h1>Welcome {firstName}!</h1>
                 <Link to="/destinations" className='link'>
                     <button>Explore all destinations</button></Link>
                 <Link to="/flashcard" className='link'>

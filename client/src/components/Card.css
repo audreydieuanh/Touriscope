@@ -1,24 +1,41 @@
 .Card {
     width: 28%;
-    padding: 0 0 15px;
+    height: 400px;
+    padding-top: 10px;
     margin: calc(10% / 6);
     display: inline-block;
     background-color: white;
-    border-radius: 0 5% 5%;
     box-shadow: 0 15px 25px #817c7c33;
 }
 
 .Card img {
-    max-width: 100%;
+    width: calc(100% - 30px);
+    height: 250px;
 }
 
 .Card h3 {
     margin: 0.5em;
-    font-size: 25px;
 }
 
-.Card .linkButton {
-    font-size: 15px;
+.nameText {
+    font-size: 24px;
+}
+
+.lookUpButton, .detailButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.lookUpButton svg, .detailButton svg {
+    fill: #274722;
+    width: 24px;
+    height: 24px;
+}
+
+.lookUpButton:hover svg, .detailButton:hover svg {
+    fill: #b6261a;
 }
 
 .cardText {
@@ -27,8 +44,6 @@
 }
 
 .save-button {
-    position: absolute;
-    top: -20px;
     right: 10px;
     background: none;
     border: none;
@@ -44,4 +59,8 @@
 .save-button.saved {
     color: #f2a123;
     text-shadow: 0 0 4px black;
+}
+
+.locationText {
+    font-style: italic;
 }

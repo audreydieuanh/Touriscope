@@ -133,7 +133,7 @@ const destinationsData = [
       },
       {
         "imgLink": "https://live.staticflickr.com/8075/8303291134_1f3ac9d8e2_b.jpg",
-        "name": "Phan Rang-Thap Cham (Cham Towers)",
+        "name": "Phan Rang-Thap Cham",
         "location": "Ninh Thuan",
         "resourceLink": "https://en.wikipedia.org/wiki/Phan_Rang%E2%80%93Th%C3%A1p_Ch%C3%A0m"
       },

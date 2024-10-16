@@ -1,9 +1,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import nodemailer from 'nodemailer';
 import questionRouter from './routes/questions.js';
 import destinationRouter from './routes/destinations.js';
-import QuestionController from './controllers/questions.js';
+import reviewRouter from './routes/reviews.js';
 
 const app = express();
 dotenv.config();
@@ -13,6 +14,7 @@ app.use(express.json());
 
 app.use('/questions', questionRouter);
 app.use('/destinations', destinationRouter);
+app.use('/reviews', reviewRouter);
 app.get('/', (req, res) => {
   console.log('Receive request for Touriscope API');
   res.status(200).send('<h1 style="text-align: center; margin-top: 50px;">Touriscope API</h1>');

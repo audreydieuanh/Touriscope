@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react'
 import './AllDestination.css'
 import Card from '../../components/Card.jsx'
 import { Link, Outlet } from "react-router-dom"
+import Header from '../../components/Header.jsx'
 
-const App = () => {
+const AllDestinations = () => {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
@@ -27,25 +28,27 @@ const App = () => {
 
   const addCards = (destinations) => {
     return destinations.map((destination) =>
-      <Card key={destination.id} img={destination.imglink} name={destination.name} location={destination.location} link={destination.resourcelink} />);
+      <Card key={destination.id} id={destination.id} img={destination.imglink} name={destination.name} location={destination.location} link={destination.resourcelink} />);
   }
 
   return (
     <>
-      <div className="header">
-        <h1>Touriscope</h1>
+      <div className='header-container'>
+        <Header />
+        <h1 className="header-title">Explore all destinations!</h1>
       </div>
-      <div>
-        <Link to="/flashcard" className='link'>
-          <button>Flashcard</button></Link>
-      </div>
+      {/* <div>
+        <Link to="/flashcard" className={styles.linkButton}>
+          <button className={styles.content1}>Flashcard</button></Link>
+      </div> */}
 
-      <div className="card">
+      <div className="card-container">
         {addCards(destinations)}
       </div>
+      <Outlet context={destinations} />
     </>
   )
 }
 
 
-export default App
+export default AllDestinations

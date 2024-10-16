@@ -3,17 +3,19 @@ import { useState } from "react";
 import './LearnFlashcard.css';
 
 const LearnFlashcard = (props) => {
-    const { front, setFront } = props;
+    const { front, setFront, increaseStreak } = props;
     var difficulty = props.difficulty;
 
     const [guess, setGuess] = useState('');
     const [answerStatus, setAnswerStatus] = useState('none');
     const [result, setResult] = useState('');
+    const [sawAnswer, setSawAnswer] = useState(false);
 
     const checkAnswer = () => {
         if (guess.toLowerCase() === props.answer.toLowerCase()) {
             setAnswerStatus('correct');
             setResult('Your answer is correct!');
+            increaseStreak();
         } else if (guess.toLowerCase() !== props.answer.toLowerCase()) {
             setAnswerStatus('incorrect');
             setResult('Your answer is incorrect. Try again!');
@@ -25,6 +27,11 @@ const LearnFlashcard = (props) => {
 
     const handleChange = (e) => {
         setGuess(e.target.value);
+    }
+
+    const handleSeeAnswer = () => {
+        setFront(false);
+        setSawAnswer(true);
     }
 
     return (
@@ -53,12 +60,10 @@ const LearnFlashcard = (props) => {
                         </label>
                     </form>
                 </div>
-                <button type="submit" className="button submit" onClick={checkAnswer}>Submit</button>
-                <button type="seeAnswer" className="button seeAnswer" onClick={() => { setFront(false) }}>See Answer</button>
+                <button type="submit" className="button submit" onClick={checkAnswer} disabled={sawAnswer}>Submit</button>
+                <button type="seeAnswer" className="button seeAnswer" onClick={handleSeeAnswer}>See Answer</button>
             </div>
             <h3>{result}</h3>
-
-
         </>
     )
 }

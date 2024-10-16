@@ -1,0 +1,33 @@
+.header {
+    background-color: #f5f5f5; /* Soft Gray */
+    padding: 20px;
+    border-bottom: 2px solid #00bcd4; /* Aqua Blue */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #00bcd4; /* Aqua Blue */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Proxima Nova', sans-serif;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5722; /* Reddish-Orange */
+}
+
+nav ul li a:active {
+    color: #ffc107; /* Warm Yellow */
+}

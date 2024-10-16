@@ -109,5 +109,36 @@ const sendDestinationsTable = async () => {
     })
 }
 
+const createReviewsTable = async () => {
+    const dropTableQuery = `
+        DROP TABLE IF EXISTS reviews;
+    `;
+
+    const createTableQuery = `
+        CREATE TABLE IF NOT EXISTS reviews (
+            id SERIAL PRIMARY KEY,
+            destinationId INTEGER NOT NULL,
+            score REAL NOT NULL,
+            description TEXT,
+            posterFirstName TEXT NOT NULL,
+            posterLastName TEXT NOT NULL,
+            posterUid TEXT NOT NULL
+        );
+    `;
+
+
+    try {
+        // First, drop the table if it exists
+        await pool.query(dropTableQuery);
+        console.log("Dropped table if it existed.");
+
+        const res = await pool.query(createTableQuery);
+        console.log('table created successfully');
+    } catch (error) {
+        console.error('⚠️ error creating question table', error)
+    }
+}
+
 sendQuestionsTable();
 sendDestinationsTable();
+createReviewsTable();

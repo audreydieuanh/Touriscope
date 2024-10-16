@@ -7,6 +7,7 @@ const LearnMode = () => {
     const [questions, setQuestions] = useState([]);
     const [currentCard, setCurrentCard] = useState(0);
     const [front, setFront] = useState(true);
+    const [streak, setStreak] = useState(0);
 
     const randomNumber = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -58,11 +59,16 @@ const LearnMode = () => {
         }
     };
 
+    const increaseStreak = () => {
+        setStreak((prev) => prev + 1);
+    }
+
     return (
         <>
             <div className="textQuiz">
                 <h2>Culture Quiz</h2>
                 <h4>How well do you know about culture? Let's test your knowledge!</h4>
+                <h4>Current streak: {streak}</h4>
             </div>
             {questions.length > 0 ? (
                 <div className="flashcardContainer">
@@ -71,7 +77,8 @@ const LearnMode = () => {
                         answer={questions[currentCard].answer}
                         difficulty={questions[currentCard].difficulty}
                         front={front}
-                        setFront={setFront}>
+                        setFront={setFront}
+                        increaseStreak={increaseStreak}>
                 // </FlashCards>
                 </div>
             ) : (
