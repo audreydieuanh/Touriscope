@@ -1,61 +1,92 @@
-h2 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-h4 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h5 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.link {
-    display: block;
+.quiz-title {
+    font-size: 2.5rem;
+    color: #0f172a;
     text-align: center;
     margin: 20px 0;
 }
 
-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f2a123;
+.quiz-subtitle {
+    font-size: 1.5rem;
+    color: #6366f1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.quiz-card-count {
+    font-size: 1.2rem;
+    color: #0ea5e9;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.link {
+    display: inline-block;
+    margin: 10px;
+}
+
+.learn-button,
+.add-button {
+    background-color: #6366f1;
     color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
     cursor: pointer;
-    margin: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
 }
 
-button:hover {
-    transform: scale(1.05);
+.learn-button:hover,
+.add-button:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
 }
 
-.allFlashcards {
+.all-flashcards {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.difficulty-label {
+    font-size: 1rem;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+#difficulty-select {
+    background-color: #f3f4f6;
+    color: #0f172a;
+    border: 1px solid #6366f1;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.difficulty-select:focus {
+    outline: none;
+    border-color: #0ea5e9;
+}
+
+.diff-select {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
-label {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
+.flashcards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
 
-select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #dc201c;
-    font-size: 16px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
+  body {
+    padding-top: 80px;
+  }
 
-select:hover {
-    border-color: #f2a123;
-}
+
+

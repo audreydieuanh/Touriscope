@@ -37,12 +37,9 @@ const LearnFlashcard = (props) => {
     return (
         <>
             <div className="learnContainer">
-                <div className="flashCardLearn" id={`${difficulty == 'easy' ? 'easy' : (difficulty == 'medium' ? 'medium' : 'hard')}`}
-                    onClick={() => { setFront(true) }}>
+                <div className={`flashCardLearn ${difficulty}`}>
                     {front ?
-                        <div className="question">
-                            <div>{props.question}</div>
-                        </div>
+                        <div className="question">{props.question}</div>
                         : <div className="answer">Answer: {props.answer}</div>}
                 </div>
             </div>
@@ -50,20 +47,21 @@ const LearnFlashcard = (props) => {
             <div>
                 <div className="formContainer">
                     <form className='guess-space'>
-                        <label className="label">Guess the answer:
-                            <input
-                                id={answerStatus}
-                                onChange={handleChange}
-                                value={guess}
-                                type="text"
-                                placeholder="Place your answer here..." />
-                        </label>
+                        <label className="label">Guess the answer:</label>
+                        <input
+                            id={answerStatus}
+                            onChange={handleChange}
+                            value={guess}
+                            type="text"
+                            className="inputField"
+                            placeholder="Place your answer here..." />
                     </form>
                 </div>
                 <button type="submit" className="button submit" onClick={checkAnswer} disabled={sawAnswer}>Submit</button>
                 <button type="seeAnswer" className="button seeAnswer" onClick={handleSeeAnswer}>See Answer</button>
             </div>
-            <h3>{result}</h3>
+            <h3 className="result-text">{result}</h3>
+
         </>
     )
 }

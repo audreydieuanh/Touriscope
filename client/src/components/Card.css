@@ -1,11 +1,18 @@
 .Card {
-    width: 28%;
-    height: 400px;
+    width: 100%;
+    height: 450px;
     padding-top: 10px;
     margin: calc(10% / 6);
     display: inline-block;
     background-color: white;
-    box-shadow: 0 15px 25px #817c7c33;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #6366f1;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.Card:hover {
+    transform: scale(1.05);
 }
 
 .Card img {
@@ -18,25 +25,45 @@
 }
 
 .nameText {
-    font-size: 24px;
+    font-size: 1.5rem;
+    background-color: #f3f4f6;
+    color: #0f172a;
+    padding: 16px;
+    margin: 0;
 }
 
-.lookUpButton, .detailButton {
+.locationText {
+    font-size: 1.2rem;
+    color: #0ea5e9;
+    margin: 4px 0 12px;
+}
+
+.look-up-button,
+.detail-button,
+.save-button,
+.review-btn {
     background-color: transparent;
+    color: #0ea5e9;
     border: none;
     cursor: pointer;
     padding: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 8px;
 }
 
-.lookUpButton svg, .detailButton svg {
-    fill: #274722;
+.look-up-button:hover,
+.detail-button:hover,
+.save-button:hover,
+.review-btn:hover {
+    color: #6366f1;
+}
+
+.look-up-button svg,
+.detail-button svg {
     width: 24px;
     height: 24px;
 }
 
-.lookUpButton:hover svg, .detailButton:hover svg {
-    fill: #b6261a;
-}
 
 .cardText {
     position: relative;
@@ -44,23 +71,10 @@
 }
 
 .save-button {
-    right: 10px;
-    background: none;
-    border: none;
     font-size: 28px;
-    color: gray;
-    cursor: pointer;
-    transition: color 0.3s;
-    padding: 0;
-    margin: 0;
-    outline: none;
 }
 
 .save-button.saved {
-    color: #f2a123;
-    text-shadow: 0 0 4px black;
+    color: #6366f1;
 }
 
-.locationText {
-    font-style: italic;
-}

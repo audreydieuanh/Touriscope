@@ -4,7 +4,8 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import firebaseAuthError from './firebaseAuthError.json';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './SignUp.css';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -40,32 +41,44 @@ const SignUp = () => {
 
     return (
         <div className='signUpContainer'>
-            <form onSubmit={signUp}>
-                <h1>Sign Up</h1>
-                <input type='text'
+            <form onSubmit={signUp} className="signUpForm">
+                <h1 className="signUpTitle">Sign Up</h1>
+                <input
+                    type='text'
+                    className="signUpInput"
                     placeholder='First Name'
                     value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}></input>
-                <input type='text'
+                    onChange={(e) => setFirstName(e.target.value)}
+                />
+                <input
+                    type='text'
+                    className="signUpInput"
                     placeholder='Last Name'
                     value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}></input>
-                <input type='text'
+                    onChange={(e) => setLastName(e.target.value)}
+                />
+                <input
+                    type='text'
+                    className="signUpInput"
                     placeholder='Enter your email'
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}></input>
+                    onChange={(e) => setEmail(e.target.value)}
+                />
                 <input
                     type='password'
+                    className="signUpInput"
                     placeholder='Enter your password'
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}></input>
+                    onChange={(e) => setPassword(e.target.value)}
+                />
                 <button type='submit' className='signUpButton'>Sign Up</button>
                 {error ? <p className='errorMessage'>{error}</p> : null}
-                <div>
-                    <p>Already signed up? Log in <Link to='/log-in'>here</Link></p>
+                <div className="loginPrompt">
+                    <p>Already signed up? Log in <Link to='/log-in' className="linkText">here</Link></p>
                 </div>
             </form>
         </div>
+
     )
 }
 

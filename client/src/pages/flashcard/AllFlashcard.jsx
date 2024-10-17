@@ -3,6 +3,7 @@ import { useState } from 'react';
 import SingleFlashcard from '../../components/SingleFlashcard.jsx';
 import "./allFlashcard.css";
 import { Link, Outlet } from "react-router-dom"
+import Header from "../../components/Header.jsx";
 
 
 const Flashcard = () => {
@@ -57,15 +58,19 @@ const Flashcard = () => {
     return (
         <>
             <div>
-                <h2>Vietnamese Culture Quiz</h2>
-                <h4>Let's learn about Vietnamese Culture!</h4>
-                <h5> Number of cards: {questionLength}
+                <Header />
+                <h2 className='quiz-title'>Culture Quiz</h2>
+                <h4 className='quiz-subtitle'>Let's learn more about culture!</h4>
+                <h5 className='card-count'> Number of cards: {questionLength}
                 </h5>
                 <Link to="learn" className='link'>
-                    <button>Learn</button></Link>
-                    <Link to="add" className='link'><button className='addButton'>Add a question</button></Link>
-                <div className='allFlashcards'>
-                    <label htmlFor="difficulty-select">Select difficulty:</label>
+                    <button className='learn-button'>Learn</button>
+                </Link>
+                <Link to="add" className='link'>
+                    <button className='add-button'>Add a question</button>
+                </Link>
+                <div className='diff-select'>
+                    <label htmlFor="difficulty-select" className='difficulty-label'>Select difficulty:</label>
                     <select
                         id="difficulty-select"
                         value={selectedDifficulty}
@@ -76,12 +81,14 @@ const Flashcard = () => {
                         <option value="medium">Medium Questions</option>
                         <option value="hard">Hard Questions</option>
                     </select>
-                    <br />
+                </div>
+                <br />
+                <div className='flashcards-container'>
                     {addFlashCards(filteredQuestions)}
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default Flashcard;

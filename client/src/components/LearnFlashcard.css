@@ -1,97 +1,98 @@
 .flashCardLearn {
     width: 500px;
     height: 300px;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #6366f1;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f9edd5;
-    transition: transform 0.3s;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 10px;
 }
 
 .flashCardLearn:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 .learnContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.question {
+    font-size: 1.2rem;
+    color: #0f172a;
+}
+
+.answer {
+    font-size: 1rem;
+    color: #0f172a;
 }
 
 .formContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.guess-space {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.question,
-.answer {
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    color: #28150e;
-}
-
-.question div {
-    font-weight: bold;
-    color: #f2a123;
-}
-
-.answer {
-    background-color: #25632f;
-    color: #ffffff;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.guess-space {
-    margin-top: 20px;
-    width: 30%;
-}
-
 .label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 1rem;
+    color: #0f172a;
+    display: inline-block;
 }
 
-input[type="text"] {
+.inputField {
+    margin-top: 8px;
     padding: 10px;
-    border: 1px solid #dc201c;
     border-radius: 5px;
-    width: calc(100% - 22px);
-}
-
-input[type="text"].correct {
-    border-color: #25632f;
-}
-
-input[type="text"].incorrect {
-    border-color: #dc201c;
+    border: 1px solid #6366f1;
+    width: 250px;
+    background-color: #f3f4f6;
+    color: #0f172a;
 }
 
 .button {
-    padding: 10px 15px;
-    margin-top: 10px;
-    border: none;
+    margin: 10px 5px;
+    padding: 10px 20px;
     border-radius: 5px;
-    color: #ffffff;
+    border: none;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .submit {
-    background-color: #f2a123;
+    background-color: #6366f1;
+    color: #ffffff;
+}
+
+.submit:disabled {
+    background-color: #bdbddb;
 }
 
 .seeAnswer {
-    background-color: #dc201c;
+    background-color: #0ea5e9;
+    color: #ffffff;
 }
 
-h3 {
-    margin-top: 10px;
-    font-size: 18px;
+.result-text {
+    font-size: 1.2rem;
+    color: #0f172a;
+    text-align: center;
+    margin-top: 20px;
 }

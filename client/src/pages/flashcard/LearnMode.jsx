@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import FlashCards from '../../components/LearnFlashcard.jsx';
 import './LearnMode.css';
+import Header from "../../components/Header.jsx";
 
 const LearnMode = () => {
     const [questions, setQuestions] = useState([]);
@@ -65,11 +66,13 @@ const LearnMode = () => {
 
     return (
         <>
+            <Header />
             <div className="textQuiz">
-                <h2>Culture Quiz</h2>
-                <h4>How well do you know about culture? Let's test your knowledge!</h4>
-                <h4>Current streak: {streak}</h4>
+                <h2 className="quiz-title">Culture Quiz</h2>
+                <h4 className="quiz-subtitle">How well do you know about culture? Let's test your knowledge!</h4>
+                <h4 className="quiz-streak">Current streak: {streak}</h4>
             </div>
+
             {questions.length > 0 ? (
                 <div className="flashcardContainer">
                     <FlashCards

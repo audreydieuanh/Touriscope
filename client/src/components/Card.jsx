@@ -58,7 +58,7 @@ const Card = (props) => {
                     <h3 className="nameText">{props.name}</h3>
                     <h3 className="locationText">{props.location}</h3>
                     <a href={props.link}>
-                        <button className="lookUpButton">
+                        <button className="look-up-button">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -70,7 +70,7 @@ const Card = (props) => {
                             </svg>
                         </button>
                     </a>
-                    <Link to={`/destinations/${props.id}`}><button className="detailButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <Link to={`/destinations/${props.id}`}><button className="detail-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
                     </svg>
                     </button></Link>
@@ -82,7 +82,7 @@ const Card = (props) => {
                     >
                         ★
                     </button>
-                    <Link to={`/destinations/add-review/${props.id}`}><button className="reviewBtn">Add a review</button></Link>
+                    <Link to={`/destinations/add-review/${props.id}`}><button className="review-btn">Add a review</button></Link>
                 </div>
             </div>
         </>

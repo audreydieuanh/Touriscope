@@ -1,4 +1,4 @@
-.flashCard {
+/* .flashCard {
   width: 400px;
   height: 200px;
   background-color: #f9edd5;
@@ -50,4 +50,36 @@
   color: #ffffff;
   border-radius: 5px;
   padding: 10px;
+} */
+
+.flashCard {
+  width: 400px;
+  height: 200px;
+  background-color: #ffffff;
+  border: 1px solid #6366f1;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flashCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.s-question {
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.s-answer {
+  font-size: 1.25rem;
+  color: #0ea5e9;
 }

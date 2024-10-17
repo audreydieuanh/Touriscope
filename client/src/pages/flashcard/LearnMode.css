@@ -15,13 +15,31 @@
 }
 
 .textQuiz {
-    color: #2b5c2e; 
-    text-align: center; 
-    letter-spacing: 2px; 
-    margin-bottom: 20px; 
-    background-color: #f9edd5; 
-    padding: 15px 30px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    background-color: #f3f4f6;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    height: 150px;
 }
 
+.quiz-title {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.quiz-subtitle {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.quiz-streak {
+    font-size: 1.5rem;
+    color: #6366f1;
+    font-weight: bold;
+}

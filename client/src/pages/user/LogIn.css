@@ -1,0 +1,79 @@
+.logInTitle {
+    font-size: 2.5rem;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logInForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logInInput {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 2px solid #0ea5e9;
+    border-radius: 8px;
+    outline: none;
+}
+
+.logInButton {
+    background-color: #6366f1;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logInButton:hover {
+    background-color: #0ea5e9;
+}
+
+.errorMessage {
+    color: #b6261a;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signUpPrompt {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-top: 20px;
+}
+
+.linkText {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkText:hover {
+    color: #0ea5e9;
+}
+
+.logInBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; 
+}
+
+.logInContainer {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+}

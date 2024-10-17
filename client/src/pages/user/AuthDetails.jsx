@@ -5,6 +5,8 @@ import LogIn from "./LogIn";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import useUserData from "./useUserData";
+import "./AuthDetails.css";
+import Header from "../../components/Header";
 
 const AuthDetails = () => {
     const { firstName } = useUserData();
@@ -16,7 +18,7 @@ const AuthDetails = () => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                setLoading(false); 
+                setLoading(false);
             } else {
                 navigate('/sign-up');
             }
@@ -36,18 +38,32 @@ const AuthDetails = () => {
     }
 
     if (loading) {
-        return <div>Loading...</div>; 
+        return <div>Loading...</div>;
     }
 
     return (
         <div>
-            {user ? <><h1>Welcome {firstName}!</h1>
-                <Link to="/destinations" className='link'>
-                    <button>Explore all destinations</button></Link>
-                <Link to="/flashcard" className='link'>
-                    <button>Continue with your learning</button></Link>
-                <button onClick={userSignOut}>Sign Out</button></> :
-                <div><LogIn /></div>}
+            <Header />
+            <div className='welcomeContainer'>
+                {user ? (
+                    <>
+                        <h1 className="welcomeMessage">Welcome {firstName}!</h1>
+                        <div className="buttonGroup">
+                            <Link to="/destinations" className="link">
+                                <button className="actionButton">Explore All Destinations</button>
+                            </Link>
+                            <Link to="/flashcard" className="link">
+                                <button className="actionButton">Continue with Your Learning</button>
+                            </Link>
+                            <button onClick={userSignOut} className="actionButton">Sign Out</button>
+                        </div>
+                    </>
+                ) : (
+                    <div><LogIn /></div>
+                )}
+            </div>
+
+
         </div>
     )
 }

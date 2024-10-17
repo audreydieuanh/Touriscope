@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useUserData from "../user/useUserData";
+import Header from "../../components/Header";
+import "./AddReview.css";
 
 const AddReview = () => {
     const { userId, firstName, lastName } = useUserData();
@@ -62,32 +64,37 @@ const AddReview = () => {
 
     return (
         <div>
-            <center><h1>Add a review</h1></center>
-            <form onSubmit={createReview}>
-                <label htmlFor="score">Rate your experience (0 - 10):</label>
-                <input
-                    type="range"
-                    id="score"
-                    name="score"
-                    min="0"
-                    max="10"
-                    step="0.1"
-                    value={newReview.score}
-                    onChange={handleChange}
-                    required
-                />
-                <output>{newReview.score}</output>
-                <br />
-                <label htmlFor="description">How was your experience?</label>
-                <input
-                    type="text"
-                    id="description"
-                    name="description"
-                    value={newReview.description}
-                    onChange={handleChange}
-                />
-                <button type="submit">Submit</button>
-            </form>
+            <Header />
+            <div className="review-container">
+                <center><h1 className="review-title">Add a Review</h1></center>
+                <form className="review-form" onSubmit={createReview}>
+                    <label htmlFor="score" className="review-label">Rate your experience (0 - 10):</label>
+                    <input
+                        type="range"
+                        id="score"
+                        name="score"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        value={newReview.score}
+                        onChange={handleChange}
+                        required
+                    />
+                    <output className="score-output">{newReview.score}</output>
+                    <br />
+                    <label htmlFor="description" className="review-label">How was your experience?</label>
+                    <input
+                        type="text"
+                        id="description"
+                        name="description"
+                        className="review-input"
+                        value={newReview.description}
+                        onChange={handleChange}
+                    />
+                    <button type="submit" className="submit-button">Submit</button>
+                </form>
+            </div>
+
         </div>
     );
 

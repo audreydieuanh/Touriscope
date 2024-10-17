@@ -9,11 +9,8 @@ const SingleFlashcard = (props) => {
         <div className="flashCard" id={`${difficulty == 'easy' ? 'easy' : (difficulty == 'medium' ? 'medium' : 'hard')}`}
         onClick={() => { setFlip(!flip) }}>
             {flip ?
-                <div className="question">
-                    {/* <div>&lt;{props.difficulty}&gt;</div> */}
-                    <div>{props.question}</div>
-                </div>
-                : <div className="answer">Answer: {props.answer}</div>}
+                    <div className="s-question">{props.question}</div>
+                : <div className="s-answer">Answer: {props.answer}</div>}
         </div>
     )
 }

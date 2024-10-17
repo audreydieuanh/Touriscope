@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Header from "../../components/Header";
+import './AddQuestion.css';
 
 const AddQuestion = () => {
     const [newQuestion, setNewQuestion] = useState({
@@ -49,39 +51,46 @@ const AddQuestion = () => {
 
     return (
         <div>
-            <center><h1>Add a question</h1></center>
-            <form onSubmit={createQuestion}>
-                <label htmlFor="question">Question:</label>
-                <input
-                    type="text"
-                    id="question"
-                    name="question"
-                    value={newQuestion.question}
-                    onChange={handleChange}
-                    required
-                />
-                <label htmlFor="answer">Answer:</label>
-                <input
-                    type="text"
-                    id="answer"
-                    name="answer"
-                    value={newQuestion.answer}
-                    onChange={handleChange}
-                    required
-                />
-                <label htmlFor="difficulty-select">Select difficulty for this question:</label>
-                <select
-                    id="difficulty-select"
-                    name="difficulty"
-                    value={newQuestion.difficulty}
-                    onChange={handleChange}
-                >
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-                <button type="submit">Submit</button>
-            </form>
+            <Header />
+            <div className="add-question-container">
+                <h1 className="form-title">Add a question</h1>
+                <form onSubmit={createQuestion} className="question-form">
+                    <label htmlFor="question" className="form-label">Question:</label>
+                    <input
+                        type="text"
+                        id="question"
+                        name="question"
+                        value={newQuestion.question}
+                        onChange={handleChange}
+                        required
+                        className="form-input"
+                    />
+                    <label htmlFor="answer" className="form-label">Answer:</label>
+                    <input
+                        type="text"
+                        id="answer"
+                        name="answer"
+                        value={newQuestion.answer}
+                        onChange={handleChange}
+                        required
+                        className="form-input"
+                    />
+                    <label htmlFor="difficulty-select" className="form-label">Select difficulty for this question:</label>
+                    <select
+                        id="difficulty-select"
+                        name="difficulty"
+                        value={newQuestion.difficulty}
+                        onChange={handleChange}
+                        className="form-select"
+                    >
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <button type="submit" className="submit-button">Submit</button>
+                </form>
+            </div>
+
         </div>
     );
 

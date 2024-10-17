@@ -1,0 +1,40 @@
+.welcomeContainer {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.welcomeMessage {
+    font-size: 2.5rem;
+    color: #6366f1;
+    margin-bottom: 30px;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.actionButton {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-color: #0ea5e9;
+    color: #0f172a;
+    transition: background-color 0.3s ease;
+}
+
+.actionButton:hover {
+    border-color: #4f46e5;
+}
+
+.link {
+    text-decoration: none;
+}
