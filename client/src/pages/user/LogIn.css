@@ -1,3 +1,12 @@
+.logInContainer {
+    background-color: #f3f4f6;
+    padding: 50px;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .logInTitle {
     font-size: 2.5rem;
     color: #0f172a;
@@ -56,24 +65,4 @@
 
 .linkText:hover {
     color: #0ea5e9;
-}
-
-.logInBody {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px; 
-}
-
-.logInContainer {
-    background-color: #f3f4f6;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
 }

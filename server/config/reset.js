@@ -13,13 +13,13 @@ const createQuestionsTable = async () => {
             id SERIAL PRIMARY KEY,
             question TEXT NOT NULL,
             answer TEXT NOT NULL,
-            difficulty TEXT NOT NULL
+            difficulty TEXT NOT NULL,
+            category TEXT NOT NULL
         );
     `;
 
 
     try {
-        // First, drop the table if it exists
         await pool.query(dropTableQuery);
         console.log("Dropped table if it existed.");
 
@@ -35,13 +35,14 @@ const sendQuestionsTable = async () => {
 
     questionsData.forEach((question) => {
         const insertQuery = {
-            text: 'INSERT INTO questions (question, answer, difficulty) VALUES ($1, $2, $3);'
+            text: 'INSERT INTO questions (question, answer, difficulty, category) VALUES ($1, $2, $3, $4);'
         }
 
         const values = [
             question.question,
             question.answer,
-            question.difficulty
+            question.difficulty,
+            question.category
         ]
 
         pool.query(insertQuery, values, (error, res) => {
@@ -50,7 +51,7 @@ const sendQuestionsTable = async () => {
                 return;
             }
 
-            console.log(`✅ ${question.question} added successfully`)
+            // console.log(`✅ ${question.question} added successfully`)
         })
     })
 }
@@ -72,7 +73,6 @@ const createDestinationsTable = async () => {
 
 
     try {
-        // First, drop the table if it exists
         await pool.query(dropTableQuery);
         console.log("Dropped table if it existed.");
 
@@ -104,7 +104,7 @@ const sendDestinationsTable = async () => {
                 return;
             }
 
-            console.log(`✅ ${destination.name} added successfully`)
+            // console.log(`✅ ${destination.name} added successfully`)
         })
     })
 }

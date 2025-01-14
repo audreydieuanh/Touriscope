@@ -6,6 +6,7 @@ const useUserData = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [highestStreak, setHighestStreak] = useState(0);
+    const [favoriteCategory, setFavoriteCategory] = useState('');
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -16,13 +17,14 @@ const useUserData = () => {
                 setFirstName(userData.firstName);
                 setLastName(userData.lastName);
                 setHighestStreak(userData.highestStreak);
+                setFavoriteCategory(userData.favoriteCategory);
             }
         };
 
         fetchUserData();
     }, []);
 
-    return { userId, firstName, lastName, highestStreak };
+    return { userId, firstName, lastName, highestStreak, favoriteCategory };
 };
 
 export default useUserData;

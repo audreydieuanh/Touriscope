@@ -1,7 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import nodemailer from 'nodemailer';
 import questionRouter from './routes/questions.js';
 import destinationRouter from './routes/destinations.js';
 import reviewRouter from './routes/reviews.js';

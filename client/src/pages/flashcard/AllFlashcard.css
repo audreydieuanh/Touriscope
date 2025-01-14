@@ -47,13 +47,13 @@
     margin-top: 20px;
 }
 
-.difficulty-label {
+.difficulty-label, .category-label {
     font-size: 1rem;
     color: #0f172a;
     font-weight: bold;
 }
 
-#difficulty-select {
+#difficulty-select, #category-select {
     background-color: #f3f4f6;
     color: #0f172a;
     border: 1px solid #6366f1;
@@ -64,12 +64,12 @@
     cursor: pointer;
 }
 
-.difficulty-select:focus {
+.difficulty-select:focus, .category-select:focus {
     outline: none;
     border-color: #0ea5e9;
 }
 
-.diff-select {
+.diff-select, .category-select {
     display: flex;
     flex-direction: column;
     align-items: center;
